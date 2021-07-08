@@ -14,8 +14,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.security.core.userdetails.User;
 
-import com.inaigem.smatbackend.usuario.Usuario;
-import com.inaigem.smatbackend.usuario.IUsuarioRepo;
 
 @Service
 public class UsuarioServiceImpl extends CRUDImpl<Usuario, Integer> implements IUsuarioService, UserDetailsService{
@@ -56,6 +54,15 @@ public class UsuarioServiceImpl extends CRUDImpl<Usuario, Integer> implements IU
 			throw new UsernameNotFoundException(String.format("Usuario no existe", username));
 		}
 
+		return usuario;
+	}
+
+	@Override
+	public IUsuarioView usuarioView(String email) {
+		IUsuarioView usuario = repo.viewUsuario(email);
+		if(usuario == null) {
+			throw new UsernameNotFoundException(String.format("Usuario no existe", email));
+		}
 		return usuario;
 	}
 }
