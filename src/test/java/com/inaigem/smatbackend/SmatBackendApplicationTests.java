@@ -19,10 +19,10 @@ class SmatBackendApplicationTests {
     @Autowired
     private IUsuarioRepo repo;
 
-    @Autowired
-    private BCryptPasswordEncoder bcrypt;
+    //@Autowired
+    //private BCryptPasswordEncoder bcrypt;
 
-    @Test
+    /*@Test
     void verificarClave() {
         Usuario us = new Usuario();
         us.setIdUsuario(2);
@@ -32,6 +32,6 @@ class SmatBackendApplicationTests {
 
         Usuario retorno = repo.save(us);
         assertTrue(retorno.getPassword().equalsIgnoreCase(us.getPassword()));
-    }
+    }*/
 
 }
