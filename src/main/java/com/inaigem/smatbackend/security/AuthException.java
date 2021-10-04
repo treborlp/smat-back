@@ -5,19 +5,19 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.ServletException;
+/*import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponse;*/
 
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.web.AuthenticationEntryPoint;
+/*import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.AuthenticationEntryPoint;*/
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.fasterxml.jackson.databind.ObjectMapper;
 
 //Cuarta clase, clase de apoyo
-public class AuthException implements AuthenticationEntryPoint {
+public class AuthException {//implements AuthenticationEntryPoint {
 
-	@Override
+	/*@Override
 	public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException arg2)
 			throws IOException, ServletException {
 		final Map<String, Object> mapException = new HashMap<>();
@@ -33,6 +33,6 @@ public class AuthException implements AuthenticationEntryPoint {
 
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.writeValue(response.getOutputStream(), mapException);
-	}
+	}*/
 
 }

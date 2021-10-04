@@ -2,7 +2,7 @@ package com.inaigem.smatbackend.security;
 
 import java.util.Arrays;
 
-import org.springframework.beans.factory.annotation.Autowired;
+/*import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,14 +13,14 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;*/
 
 //Tercera Clase
-@Configuration
-@EnableAuthorizationServer
-public class AuthorizationServer extends AuthorizationServerConfigurerAdapter{
+//@Configuration
+//@EnableAuthorizationServer
+public class AuthorizationServer{// extends AuthorizationServerConfigurerAdapter{
 
-	@Value("${security.jwt.client-id}")
+	/*@Value("${security.jwt.client-id}")
 	private String clientId;
 
 	@Value("${security.jwt.client-secret}")
@@ -66,6 +66,6 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter{
 		enhancerChain.setTokenEnhancers(Arrays.asList(accessTokenConverter, userInfoToken));
 
 		endpoints.tokenStore(tokenStore).accessTokenConverter(accessTokenConverter).tokenEnhancer(enhancerChain).authenticationManager(authenticationManager);
-	}
+	}*/
 
 }
